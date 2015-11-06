@@ -4,30 +4,36 @@
 //$(document).load(function () {
 //
 
-    $("#card-1").flip({
+function flipCard(className){
+    $(className).flip({
         axis: "x", // y or x
         reverse: false, // true and false
         speed: 1000
-    });
-    $("#card-2").flip({
-        axis: "x", // y or x
-        reverse: false, // true and false
-        speed: 1000
-    });
-    $("#card-3").flip({
-        axis: "x", // y or x
-        reverse: false, // true and false
-        speed: 1000
-    });
-    $("#card-4").flip({
-        axis: "x", // y or x
-        reverse: false, // true and false
-        speed: 1000
-    });
-    $("#card-5").flip({
-        axis: "x", // y or x
-        reverse: false, // true and false
-        speed: 1000
-    });
+    })
+}
+
+flipCard( '#card-1' );
+flipCard( '#card-2' );
+flipCard( '#card-3' );
+flipCard( '#card-4' );
+flipCard( '#card-5' );
+flipCard( '#card-6' );
+flipCard( '#card-7' );
+flipCard( '#card-8' );
+flipCard( '#card-9' );
+flipCard( '#card-9' );
+flipCard( '#card-10' );
+flipCard( '#card-11' );
+flipCard( '#card-12' );
 
 //});
+
+
+// add into the function the addition of a class to track what has been flipped.
+// then set up some magic to read if there are two of the same classes selected
+// to make those vanish/lock/fart, whatever.
+
+// if the two classes don't match, remove the class from both and undo the flip. (probably have to research how to undo that flippy bit)
+
+
+//also think about doing some jQuery magic to randomize the location of the cards on initial load.
