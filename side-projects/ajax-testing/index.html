@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.post demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+<form id="searchForm">
+    <input type="text" name="testinput" placeholder="Search...">
+    <input type="submit" value="Search">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+
+<!--<input type="text" id="result2" value="0" maxlength="9" style="width: 300px;"/>-->
+<div id="result2">here</div>
+
+
+
+
+<script>
+    $('#searchForm').submit( function( e ) {
+        e.preventDefault();
+        var form_data	= $(this).serialize();
+        $.post("processing.php", form_data, function( data ) {
+            //alert( data );
+            //alert("hey it did a thing!");
+            $("#result2").html( data );
+        });
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

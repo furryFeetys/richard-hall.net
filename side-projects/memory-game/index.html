@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+            margin: 0 100px;
+        }
+        .card {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .front, .back {
+            border: 2px gray solid;
+            padding: 10px;
+        }
+        .front {
+            background-color: #ccc;
+        }
+        .back {
+            background-color: lemonchiffon;
+        }
+        .glyphicon {
+            font-size: 80px;
+        }
+        div span{
+            margin: 50px 0px 0px 45px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Memory Game</h1>
+
+<p>Match pairs until you have matched them all!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        <div id="card-1" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <div id="card-2" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <div id="card-3" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div id="card-4" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-5" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-6" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="card-7" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-8" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-9" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="card-10" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-11" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="card-12" class="card">
+                <div class="front">
+                    ?
+                </div>
+                <div class="back">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="scripts/jquery.flip.js"></script>
+<script src="scripts/scripts.js"></script>
+
+
+
+
+
+</body>
+</html>

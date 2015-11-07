@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Game of Threes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Game of Threes.</h1>
+
+<p>First, you select in a random large number to start with. Then, the program does the following:
+<ul>
+    <li>If the number is divisible by 3, divide it by 3.</li>
+    <li>If it's not, either add 1 or subtract 1 (to make it divisible by 3), then divide it by 3.</li>
+    <li>The game stops when you reach "1".</li>
+</ul></p>
+<h3>Challenge Description</h3>
+<p>Each step is output as the number you start at, followed by either -1 or 1 (if you are subtracting/adding 1 before dividing), or 0 (if you are just dividing). The last line should simply be 1.</p>
+
+
+<form id="go">
+    <input type="text" name="go" placeholder="Type in a number">
+    <input type="submit" value="Play the Game!">
+</form>
+<div id="result2">Results will go here.</div>
+
+
+<script>
+    $('#go').submit(function (e) {
+        e.preventDefault();
+        var form_data = $(this).serialize();
+        $.post("processing.php", form_data, function (data) {
+            //alert( data );
+            //alert("hey it did a thing!");
+            $("#result2").html(data);
+        });
+    });
+
+</script>
