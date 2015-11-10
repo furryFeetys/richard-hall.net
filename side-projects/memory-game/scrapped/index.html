@@ -21,23 +21,15 @@
         }
         .front {
             background-color: #ccc;
-            z-index: 10;
-            position: absolute;
-            padding: 50px 25px 30px 70px;
         }
         .back {
             background-color: lemonchiffon;
-            z-index: -50;
-            position: absolute;
-            padding: 25px 30px 15px 25px;
         }
         .glyphicon {
             font-size: 80px;
-            padding: 0px 0px 0px 15px;
-            margin-top: -15px;
         }
-        p {
-            padding: 0px 50px 0px 0px;
+        div span{
+            margin: 50px 0px 0px 45px;
         }
     </style>
 </head>
@@ -46,13 +38,11 @@
 <h1>Memory Game</h1>
 
 <p>Match pairs until you have matched them all!</p>
-<span class="test"></span>
+
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-
-
-            <div class="card">
+        <div id="card-1" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -61,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div id="card-2" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -70,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div id="card-3" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -79,12 +69,8 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <div class="col-md-3">
-            <div class="card">
+            <div id="card-4" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -92,7 +78,7 @@
                     <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
+            <div id="card-5" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -100,8 +86,8 @@
                     <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
-                <div class="front apple">
+            <div id="card-6" class="card">
+                <div class="front">
                     <p>?</p>
                 </div>
                 <div class="back">
@@ -111,15 +97,15 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card">
-                <div class="front apple">
+            <div id="card-7" class="card">
+                <div class="front">
                     <p>?</p>
                 </div>
                 <div class="back">
                     <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
+            <div id="card-8" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -127,7 +113,7 @@
                     <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
+            <div id="card-9" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -138,7 +124,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card">
+            <div id="card-10" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -146,7 +132,7 @@
                     <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
+            <div id="card-11" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -154,7 +140,7 @@
                     <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
                 </div>
             </div>
-            <div class="card">
+            <div id="card-12" class="card">
                 <div class="front">
                     <p>?</p>
                 </div>
@@ -163,8 +149,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 
@@ -173,7 +157,8 @@
 
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="scripts/scripts.js"></script>
+ <script src="../scripts/jquery.flip.js"></script>
+<script src="../scripts/scripts.js"></script>
 
 
 
