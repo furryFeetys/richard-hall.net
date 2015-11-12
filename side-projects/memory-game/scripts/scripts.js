@@ -5,6 +5,7 @@
 // This function checks the divs to see if they have the "clicked" class. If they do, increment the "count"
 // variable that we are using to keep track of how many cards are clicked.
 var count = 0;
+var startClass = '';
 function checkClass(){
     //alert ("first step");
 
@@ -12,7 +13,12 @@ function checkClass(){
         count++;
     }
 }
-
+var classList = document.getElementById('div').className.split(/\s+/);
+for (var i = 0; i < classList.length; i++) {
+    if (classList[i] === 'heart') {
+        alert("I think this works?");
+    }
+}
 
 
 
@@ -22,6 +28,12 @@ $ (".card").click(function() {
     $(this).toggleClass("clicked").find(".front").fadeToggle("fast", "linear");
     //alert ("before function");
     checkClass();
+    // if startClass empty, assign the class icon of what we clicked into start class.
+    startClass = ''; // Set to whatever you click first.
+
+    // if statClass not empty, compare the icon class of what we clicked to start class.
+    // If they match, huzzah. GOt one right on memory game.
+    // else, fade out.
 
 
     // trying to establish a way to track things.
@@ -35,14 +47,16 @@ $ (".card").click(function() {
     // when 2 objects have been clicked, this triggers a delayed toggleClass on the clicked objects, then toggles the fade so the cards revert back to default.
     if( count >= 2){
 
-        var divs = $(".clicked");
-        console.log($(".clicked").get(0));
-        console.log($(".clicked").get(1));
+        var divs = $(".clicked").find(".back");
+        console.log($(divs).get(0));
+        console.log($(divs).get(1));
         alert(divs.length);
+        //alert( divs.get(0) );
         if (divs.get(0) == divs.get(1)) alert("Same");
-        if ($(".clicked").get(0) == $(".clicked").get(1) )alert("YEAH!");
+        //if ($(".clicked").get(0) == $(".clicked").get(1) )alert("YEAH!");
         //$('.clicked *').attr('disabled','disabled').off('click');
-        //$(".clicked").toggleClass("clicked").find(".front").delay( 2000).fadeToggle("fast", "linear");
+
+        $(".clicked").toggleClass("clicked").find(".front").delay( 2000).fadeToggle("fast", "linear");
         count = 0;
     }
 });
