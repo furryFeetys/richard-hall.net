@@ -16,7 +16,7 @@ function checkClass() {
 /*
 
 /////////////// RICHARD THESE NOTES ARE FOR YOU!!! //////////
-// Nigga is "div" an ID? wtf?
+// getElementById needs to be passed an id, not an element type.
 //var classList = document.getElementById('div').className.split(/\s+/);
 var classList = document.getElementById('div').className.split(/\s+/);
 for (var i = 0; i < classList.length; i++) {
